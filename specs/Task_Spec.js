@@ -23,7 +23,7 @@ describe("Task", function() {
 
   it("can get task completion status", function(){
     assert.strictEqual(false, task1.completionStatus)
-  })
+  });
 
 
 
