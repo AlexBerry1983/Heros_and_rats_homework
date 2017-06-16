@@ -6,7 +6,7 @@ describe("Hero", function() {
   var hero;
 
   beforeEach(function(){
-    hero = new Hero("Alan", 100, "Mead");
+    hero = new Hero("Alan", 100, "Steak");
   });
 
   it("can get Hero name", function(){
@@ -18,7 +18,7 @@ describe("Hero", function() {
   });
 
   it("can get hero's favourite food", function(){
-    assert.strictEqual("Mead", hero.favouriteFood);
+    assert.strictEqual("Steak", hero.favouriteFood);
   });
 
   it("hero can say their own name", function(){
@@ -30,5 +30,5 @@ describe("Hero", function() {
   });
 
 
-  
+
 })
