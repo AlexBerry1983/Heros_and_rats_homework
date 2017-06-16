@@ -80,6 +80,12 @@ describe("Hero", function() {
     assert.deepEqual(([task3]), hero.viewCompletedTasks());
   });
 
+  it("can view incomplete tasks", function(){
+    hero.addTask(task);
+    hero.addTask(task3);
+    assert.deepEqual(([task]), hero.viewInompleteTasks());
+  });
+
 
 
 

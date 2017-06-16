@@ -42,7 +42,17 @@ Hero.prototype = {
       }
     }
     return completedTasks;
+  },
+  viewInompleteTasks: function() {
+    incompleteTasks = []
+    this.tasks.forEach(function(task){
+      if(task.completionStatus === false){
+        incompleteTasks.push(task);
+      }
+    })
+    return incompleteTasks; 
   }
+
 };
 
 
