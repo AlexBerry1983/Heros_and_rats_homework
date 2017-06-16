@@ -6,11 +6,15 @@ describe("Task", function() {
   var task1;
 
   beforeEach(function() {
-    task1 = new Task(5);
+    task1 = new Task(5, 1);
   });
 
   it("can get difficulty level", function(){
     assert.strictEqual(5, task1.difficultyLevel)
+  });
+
+  it("can get urgency level", function(){
+    assert.strictEqual(1, task1.urgencyLevel)
   });
 
 
