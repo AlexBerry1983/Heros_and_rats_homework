@@ -21,5 +21,7 @@ describe("Hero", function() {
     assert.strictEqual("Mead", hero.favouriteFood);
   });
 
-
+  it("hero can say their own name", function(){
+    assert.strictEqual("My name is Alan", hero.talk())
+  })
 })
