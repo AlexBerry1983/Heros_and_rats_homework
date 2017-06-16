@@ -9,12 +9,14 @@ describe("Hero", function() {
   var foodItem1;
   var foodItem2;
   var task;
+  var task2
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak");
     foodItem1 = new Food("Bread", 5);
     foodItem2 = new Food("Steak", 10);
     task = new Task(5, 1, 100, false);
+    task2 = new Task(1, 5, 50, false);
   });
 
   it("can get Hero name", function(){
@@ -52,7 +54,19 @@ describe("Hero", function() {
     assert.strictEqual(1, hero.countTasks());
   });
 
-  
+  it("can order tasks by difficultyLevel", function(){
+    hero.addTask(task2);
+    hero.addTask(task);
+    assert.deepEqual(([task,task2]), hero.sortTasksByDifficulty());
+  })
+
+  it("can order tasks by urgency level", function(){
+    hero.addTask(task2);
+    hero.addTask(task);
+    assert.deepEqual(([task,task2]), hero.sortTasksByUrgency());
+  })
+
+
 
 
 
