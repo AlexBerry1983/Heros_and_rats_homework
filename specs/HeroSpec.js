@@ -6,7 +6,7 @@ describe("Hero", function() {
   var hero;
 
   beforeEach(function(){
-    hero = new Hero("Alan");
+    hero = new Hero("Alan", 100);
   });
 
   it("can get Hero name", function(){
