@@ -14,8 +14,9 @@ describe("Hero", function() {
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak");
-    foodItem1 = new Food("Bread", 5);
-    foodItem2 = new Food("Steak", 10);
+    foodItem1 = new Food("Bread", 5, false);
+    foodItem2 = new Food("Steak", 10, false);
+    foodItem3 = new Food("Cheese", 5, true);
     task = new Task(5, 1, 100, false);
     task2 = new Task(1, 5, 50, false);
     task3 = new Task(3, 3, 75, true);
@@ -90,6 +91,11 @@ describe("Hero", function() {
     hero.addTask(task);
     hero.completeTask(task);
     assert.strictEqual(true, task.completionStatus);
+  });
+
+  it("poisoned food reduces hero health", function() {
+    hero.eat(foodItem3);
+    assert.strictEqual(95, hero.health);
   })
 
 

@@ -16,7 +16,9 @@ Hero.prototype = {
     return this.tasks.length;
   },
   eat: function(food){
-    if (food.name === this.favouriteFood){
+    if(food.poisonStatus === true){
+      this.health -= food.replenishmentValue;
+    } else if (food.name === this.favouriteFood){
       this.health += food.replenishmentValue * 1.5;
     } else {
       this.health += food.replenishmentValue;
@@ -53,7 +55,7 @@ Hero.prototype = {
     return incompleteTasks;
   },
   completeTask: function(task) {
-      task.completionStatus = true;
+    task.completionStatus = true;
   }
 
 
