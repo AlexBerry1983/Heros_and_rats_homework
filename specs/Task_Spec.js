@@ -6,7 +6,7 @@ describe("Task", function() {
   var task1;
 
   beforeEach(function() {
-    task1 = new Task(5, 1, 100);
+    task1 = new Task(5, 1, 100, false);
   });
 
   it("can get difficulty level", function(){
@@ -19,6 +19,10 @@ describe("Task", function() {
 
   it("can get reward from a task", function(){
     assert.strictEqual(100, task1.rewardAmount)
+  });
+
+  it("can get task completion status", function(){
+    assert.strictEqual(false, task1.completionStatus)
   })
 
 
