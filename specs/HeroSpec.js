@@ -22,6 +22,13 @@ describe("Hero", function() {
   });
 
   it("hero can say their own name", function(){
-    assert.strictEqual("My name is Alan", hero.talk())
-  })
+    assert.strictEqual("My name is Alan", hero.talk());
+  });
+
+  it("hero tasks array starts empty", function(){
+    assert.strictEqual(0, hero.countTasks());
+  });
+
+
+  
 })
