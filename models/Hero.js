@@ -27,10 +27,12 @@ Hero.prototype = {
   },
   sortTasksByDifficulty: function(){
     return _.orderBy(this.tasks, 'difficultyLevel', 'desc');
-    // return this.tasks.sort( (a,b) => {return a.difficultyLevel - b.difficultyLevel} ).reverse()
   },
   sortTasksByUrgency: function(){
     return _.orderBy(this.tasks, 'urgencyLevel', 'asc');
+  },
+  sortTasksByRewardAmount: function(){
+    return _.orderBy(this.tasks, 'rewardAmount', 'desc');
   }
 };
 
