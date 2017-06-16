@@ -50,10 +50,15 @@ Hero.prototype = {
         incompleteTasks.push(task);
       }
     })
-    return incompleteTasks; 
+    return incompleteTasks;
+  },
+  completeTask: function(task) {
+      task.completionStatus = true;
   }
 
-};
+
+
+}
 
 
 module.exports = Hero;

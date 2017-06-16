@@ -86,6 +86,12 @@ describe("Hero", function() {
     assert.deepEqual(([task]), hero.viewInompleteTasks());
   });
 
+  it("can complete tasks", function(){
+    hero.addTask(task);
+    hero.completeTask(task);
+    assert.strictEqual(true, task.completionStatus);
+  })
+
 
 
 
