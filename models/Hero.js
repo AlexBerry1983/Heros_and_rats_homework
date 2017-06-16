@@ -33,6 +33,15 @@ Hero.prototype = {
   },
   sortTasksByRewardAmount: function(){
     return _.orderBy(this.tasks, 'rewardAmount', 'desc');
+  },
+  viewCompletedTasks: function(){
+    completedTasks = []
+    for(task of this.tasks){
+      if(task.completionStatus === true){
+        completedTasks.push(task);
+      }
+    }
+    return completedTasks;
   }
 };
 

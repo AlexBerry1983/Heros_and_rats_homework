@@ -9,7 +9,8 @@ describe("Hero", function() {
   var foodItem1;
   var foodItem2;
   var task;
-  var task2
+  var task2;
+  var task3;
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak");
@@ -17,6 +18,7 @@ describe("Hero", function() {
     foodItem2 = new Food("Steak", 10);
     task = new Task(5, 1, 100, false);
     task2 = new Task(1, 5, 50, false);
+    task3 = new Task(3, 3, 75, true);
   });
 
   it("can get Hero name", function(){
@@ -58,20 +60,25 @@ describe("Hero", function() {
     hero.addTask(task2);
     hero.addTask(task);
     assert.deepEqual(([task,task2]), hero.sortTasksByDifficulty());
-  })
+  });
 
   it("can order tasks by urgency level", function(){
     hero.addTask(task2);
     hero.addTask(task);
     assert.deepEqual(([task,task2]), hero.sortTasksByUrgency());
-  })
+  });
 
   it("can order tasks by reward amount", function(){
     hero.addTask(task2);
     hero.addTask(task);
     assert.deepEqual(([task,task2]), hero.sortTasksByRewardAmount());
-  })
+  });
 
+  it("can view completed tasks", function(){
+    hero.addTask(task);
+    hero.addTask(task3);
+    assert.deepEqual(([task3]), hero.viewCompletedTasks());
+  });
 
 
 
