@@ -1,12 +1,15 @@
 var assert = require( 'assert' );
 var Hero = require( '../models/Hero.js' );
+var Food = require( '../models/Food.js' );
 
 describe("Hero", function() {
 
   var hero;
+  var foodItem1;
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak");
+    foodItem1 = new Food("Bread", 5)
   });
 
   it("can get Hero name", function(){
@@ -27,6 +30,11 @@ describe("Hero", function() {
 
   it("hero tasks array starts empty", function(){
     assert.strictEqual(0, hero.countTasks());
+  });
+
+  it("hero can increase health by eating", function(){
+    hero.eat(foodItem1);
+    assert.strictEqual(105, hero.health);
   });
 
 

@@ -1,5 +1,6 @@
-var Food = function(name){
-  this.name = name
+var Food = function(name, replenishmentValue){
+  this.name = name;
+  this.replenishmentValue = replenishmentValue;
 }
 
 module.exports = Food;

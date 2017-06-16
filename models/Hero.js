@@ -12,6 +12,9 @@ Hero.prototype = {
   },
   countTasks: function(){
     return this.tasks.length;
+  },
+  eat: function(food){
+    this.health += food.replenishmentValue;
   }
 };
 
