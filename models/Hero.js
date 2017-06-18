@@ -67,6 +67,9 @@ Hero.prototype = {
   },
   pickUpWeapon: function(weapon){
     this.weapons.push(weapon)
+  },
+  strikeEnemy: function(weapon, evilHero){
+    evilHero.health -= weapon.damageValue;
   }
 
 

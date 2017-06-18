@@ -7,7 +7,7 @@ describe("EvilHero", function(){
   var evilHero;
 
   beforeEach(function(){
-    evilHero = new EvilHero("Kurtha");
+    evilHero = new EvilHero("Kurtha", 100);
     hero = new Hero("Alan", 100, "Steak");
   });
 
