@@ -150,10 +150,10 @@ describe("Hero", function() {
     assert.strictEqual(0, hero.gold);
   });
 
-  // it("can get gold from completed tasks", function(){
-  //   hero.completeTask(task);
-  //   assertEqual(100, hero.countGold());
-  // });
+  it("can get gold from completed tasks", function(){
+    hero.completeTask(task);
+    assert.strictEqual(100, hero.gold);
+  });
 
 
 

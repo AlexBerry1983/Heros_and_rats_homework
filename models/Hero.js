@@ -59,6 +59,7 @@ Hero.prototype = {
   },
   completeTask: function(task) {
     task.completionStatus = true;
+    this.gold += task.rewardAmount;
   },
   castMagicShield: function() {
     this.magicShield = true;
