@@ -3,7 +3,8 @@ var Hero = require( '../models/Hero.js' );
 var Food = require( '../models/Food.js' );
 var Task = require( '../models/Task.js' );
 var Weapon = require( '../models/Weapon.js' );
-var EvilHero = require( '../models/EvilHero.js')
+var EvilHero = require( '../models/EvilHero.js');
+var WanderingWizard = require( '../models/WanderingWizard.js' );
 
 describe("Hero", function() {
 
@@ -16,6 +17,7 @@ describe("Hero", function() {
   var weapon1;
   var weapon2;
   var evilHero;
+  var wizard;
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak", false);
@@ -26,7 +28,9 @@ describe("Hero", function() {
     task2 = new Task(1, 5, 50, false);
     task3 = new Task(3, 3, 75, true);
     weapon1 = new Weapon("Sword", 10, false);
-    evilHero = new EvilHero("Kurtha", 100)
+    weapon2 = new Weapon("Axe", 15, false);
+    evilHero = new EvilHero("Kurtha", 100);
+    wizard = new WanderingWizard();
   });
 
   it("can get Hero name", function(){
@@ -131,10 +135,16 @@ describe("Hero", function() {
 
   it("can ensorcelled weapon does double damage", function(){
     hero.pickUpWeapon(weapon1);
-    weapon1.ensorcell(weapon1);
+    wizard.ensorcellWeapon(weapon1);
     hero.strikeEnemy(weapon1, evilHero);
     assert.strictEqual(80, evilHero.health);
   });
+
+  // it("Can choose best weapon", function(){
+  //   hero.pickUpWeapon(weapon1);
+  //   hero.pickUpWeapon(weapon2);
+  //   assert.deepEqual(([weapon2]), hero.chooseBestWeapon());
+  // });
 
 
 

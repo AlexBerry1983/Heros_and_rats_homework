@@ -18,10 +18,5 @@ describe("Weapon", function(){
     assert.strictEqual(10, weapon1.damageValue)
   });
 
-  it("can ensorcell weapon", function(){
-    weapon1.ensorcell();
-    assert.strictEqual(true, weapon1.ensorcelled)
-  });
-
 
 })

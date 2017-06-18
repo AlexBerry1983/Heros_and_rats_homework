@@ -5,9 +5,7 @@ var Weapon = function(type, damageValue, ensorcelled){
 }
 
 Weapon.prototype = {
-  ensorcell: function(){
-    this.ensorcelled = true;
-  }
+  
 }
 
 module.exports = Weapon;
