@@ -64,6 +64,9 @@ Hero.prototype = {
   },
   countWeapons: function() {
     return this.weapons.length;
+  },
+  pickUpWeapon: function(weapon){
+    this.weapons.push(weapon)
   }
 
 

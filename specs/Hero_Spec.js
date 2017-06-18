@@ -2,6 +2,7 @@ var assert = require( 'assert' );
 var Hero = require( '../models/Hero.js' );
 var Food = require( '../models/Food.js' );
 var Task = require( '../models/Task.js' );
+var Weapon = require( '../models/Weapon.js' );
 
 describe("Hero", function() {
 
@@ -11,6 +12,7 @@ describe("Hero", function() {
   var task;
   var task2;
   var task3;
+  var weapon1;
 
   beforeEach(function(){
     hero = new Hero("Alan", 100, "Steak", false);
@@ -20,6 +22,7 @@ describe("Hero", function() {
     task = new Task(5, 1, 100, false);
     task2 = new Task(1, 5, 50, false);
     task3 = new Task(3, 3, 75, true);
+    weapon1 = new Weapon("Sword", 10);
   });
 
   it("can get Hero name", function(){
@@ -109,7 +112,12 @@ describe("Hero", function() {
 
   it("hero weapons array starts empty", function(){
     assert.strictEqual(0, hero.countWeapons());
-  })
+  });
+
+  it("can add weapon to weapon array", function(){
+    hero.pickUpWeapon(weapon1);
+    assert.strictEqual(1, hero.countWeapons());
+  });
 
 
 
