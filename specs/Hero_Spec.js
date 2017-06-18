@@ -13,7 +13,7 @@ describe("Hero", function() {
   var task3;
 
   beforeEach(function(){
-    hero = new Hero("Alan", 100, "Steak");
+    hero = new Hero("Alan", 100, "Steak", false);
     foodItem1 = new Food("Bread", 5, false);
     foodItem2 = new Food("Steak", 10, false);
     foodItem3 = new Food("Cheese", 5, true);
@@ -93,10 +93,14 @@ describe("Hero", function() {
     assert.strictEqual(true, task.completionStatus);
   });
 
-  it("poisoned food reduces hero health", function() {
+  it("poisoned food reduces hero health", function(){
     hero.eat(foodItem3);
     assert.strictEqual(95, hero.health);
-  })
+  });
+
+  it("hero starts without magic shield", function(){
+    assert.strictEqual(false, hero.magicShield);
+  });
 
 
 
