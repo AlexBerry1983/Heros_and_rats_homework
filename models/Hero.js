@@ -75,10 +75,10 @@ Hero.prototype = {
       evilHero.health -= weapon.damageValue;
     }
   },
-  // chooseBestWeapon:function(){
-  //   var bestWeapon = _.sortBy(this.weapons, 'damageValue', 'desc');
-  //     return bestWeapon[-1];
-  // }
+  chooseBestWeapon:function(){
+    var bestWeapon = _.orderBy(this.weapons, 'damageValue', 'desc');
+      return bestWeapon[0];
+  }
 
 
 }

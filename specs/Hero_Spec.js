@@ -140,11 +140,11 @@ describe("Hero", function() {
     assert.strictEqual(80, evilHero.health);
   });
 
-  // it("Can choose best weapon", function(){
-  //   hero.pickUpWeapon(weapon1);
-  //   hero.pickUpWeapon(weapon2);
-  //   assert.deepEqual(([weapon2]), hero.chooseBestWeapon());
-  // });
+  it("Can choose best weapon", function(){
+    hero.pickUpWeapon(weapon1);
+    hero.pickUpWeapon(weapon2);
+    assert.deepEqual((weapon2), hero.chooseBestWeapon());
+  });
 
 
 
