@@ -20,5 +20,9 @@ describe("EvilHero", function(){
     assert.strictEqual(80, hero.health);
   });
 
-  
+  it("heros magic shield reduces fireball damage to 10", function(){
+    hero.castMagicShield();
+    evilHero.fireball(hero);
+    assert.strictEqual(90, hero.health);
+  });
 })

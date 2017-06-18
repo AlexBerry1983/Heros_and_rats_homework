@@ -5,8 +5,12 @@ var EvilHero = function(name){
 }
 
 EvilHero.prototype = {
-  fireball: function(hero){
-    hero.health -= 20;
+  fireball: function(hero) {
+    if(hero.magicShield === false) {
+      hero.health -= 20;
+    } else {
+      hero.health -=10;
+    }
   }
 }
 module.exports = EvilHero;
