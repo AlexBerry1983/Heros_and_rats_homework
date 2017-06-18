@@ -6,7 +6,7 @@ describe("WanderingWizard", function() {
 
   beforeEach(function(){
     wizard = new WanderingWizard()
-    weapon = new Weapon("Sword", 10, false)
+    weapon = new Weapon("Sword", 10, false, 50)
   })
 
   it("can ensorcell weapon", function(){

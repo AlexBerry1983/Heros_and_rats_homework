@@ -27,8 +27,8 @@ describe("Hero", function() {
     task = new Task(5, 1, 100, false);
     task2 = new Task(1, 5, 50, false);
     task3 = new Task(3, 3, 75, true);
-    weapon1 = new Weapon("Sword", 10, false);
-    weapon2 = new Weapon("Axe", 15, false);
+    weapon1 = new Weapon("Sword", 10, false, 50);
+    weapon2 = new Weapon("Axe", 15, false, 75);
     evilHero = new EvilHero("Kurtha", 100);
     wizard = new WanderingWizard();
   });
@@ -154,6 +154,8 @@ describe("Hero", function() {
     hero.completeTask(task);
     assert.strictEqual(100, hero.gold);
   });
+
+
 
 
 
