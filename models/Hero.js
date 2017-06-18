@@ -6,6 +6,7 @@ var Hero = function(name, health, favouriteFood, magicShield) {
   this.favouriteFood = favouriteFood;
   this.tasks = [];
   this.magicShield = false;
+  this.weapons = [];
 }
 
 
@@ -60,6 +61,9 @@ Hero.prototype = {
   },
   castMagicShield: function() {
     this.magicShield = true;
+  },
+  countWeapons: function() {
+    return this.weapons.length;
   }
 
 

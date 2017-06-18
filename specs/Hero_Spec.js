@@ -105,6 +105,10 @@ describe("Hero", function() {
   it("hero can cast magic shield", function(){
     hero.castMagicShield();
     assert.strictEqual(true, hero.magicShield);
+  });
+
+  it("hero weapons array starts empty", function(){
+    assert.strictEqual(0, hero.countWeapons());
   })
 
 
