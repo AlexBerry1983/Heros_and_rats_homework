@@ -155,6 +155,12 @@ describe("Hero", function() {
     assert.strictEqual(100, hero.gold);
   });
 
+  it("can sell weapon and add gold to purse", function(){
+    hero.pickUpWeapon(weapon1);
+    hero.sellWeapon(weapon1);
+    assert.strictEqual(50, hero.gold);
+  })
+
 
 
 

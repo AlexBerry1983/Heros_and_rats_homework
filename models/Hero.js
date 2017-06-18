@@ -80,6 +80,9 @@ Hero.prototype = {
   chooseBestWeapon:function(){
     var bestWeapon = _.orderBy(this.weapons, 'damageValue', 'desc');
       return bestWeapon[0];
+  },
+  sellWeapon: function(weapon){
+    this.gold += weapon.value;
   }
 
 
