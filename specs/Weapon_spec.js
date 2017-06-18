@@ -14,5 +14,11 @@ describe("Weapon", function(){
   });
 
 
-  
+  it("can get weapon damage value", function(){
+    assert.strictEqual(10, weapon1.damageValue)
+  });
+
+
+
+
 })
