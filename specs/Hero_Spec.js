@@ -146,6 +146,17 @@ describe("Hero", function() {
     assert.deepEqual((weapon2), hero.chooseBestWeapon());
   });
 
+  it("check gold starts at zero", function(){
+    assert.strictEqual(0, hero.gold);
+  });
+
+  // it("can get gold from completed tasks", function(){
+  //   hero.completeTask(task);
+  //   assertEqual(100, hero.countGold());
+  // });
+
+
+
 
 
 

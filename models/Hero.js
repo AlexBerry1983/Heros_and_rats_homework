@@ -1,12 +1,13 @@
 var _ = require( "lodash" )
 
-var Hero = function(name, health, favouriteFood, magicShield) {
+var Hero = function(name, health, favouriteFood, magicShield, gold) {
   this.name = name;
   this.health = 100;
   this.favouriteFood = favouriteFood;
   this.tasks = [];
   this.magicShield = false;
   this.weapons = [];
+  this.gold = 0;
 }
 
 
