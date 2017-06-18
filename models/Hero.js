@@ -57,6 +57,9 @@ Hero.prototype = {
   },
   completeTask: function(task) {
     task.completionStatus = true;
+  },
+  castMagicShield: function() {
+    this.magicShield = true;
   }
 
 

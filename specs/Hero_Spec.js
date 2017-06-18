@@ -102,6 +102,11 @@ describe("Hero", function() {
     assert.strictEqual(false, hero.magicShield);
   });
 
+  it("hero can cast magic shield", function(){
+    hero.castMagicShield();
+    assert.strictEqual(true, hero.magicShield);
+  })
+
 
 
 
