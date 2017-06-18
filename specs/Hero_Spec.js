@@ -22,7 +22,7 @@ describe("Hero", function() {
     task = new Task(5, 1, 100, false);
     task2 = new Task(1, 5, 50, false);
     task3 = new Task(3, 3, 75, true);
-    weapon1 = new Weapon("Sword", 10);
+    weapon1 = new Weapon("Sword", 10, false);
   });
 
   it("can get Hero name", function(){
