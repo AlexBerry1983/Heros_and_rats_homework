@@ -69,7 +69,11 @@ Hero.prototype = {
     this.weapons.push(weapon)
   },
   strikeEnemy: function(weapon, evilHero){
-    evilHero.health -= weapon.damageValue;
+    if(weapon.ensorcelled === true){
+      evilHero.health -= weapon.damageValue * 2;
+    } else {
+      evilHero.health -= weapon.damageValue;
+    }
   }
 
 

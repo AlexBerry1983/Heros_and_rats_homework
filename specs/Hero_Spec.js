@@ -14,6 +14,7 @@ describe("Hero", function() {
   var task2;
   var task3;
   var weapon1;
+  var weapon2;
   var evilHero;
 
   beforeEach(function(){
@@ -127,6 +128,15 @@ describe("Hero", function() {
     hero.strikeEnemy(weapon1, evilHero);
     assert.strictEqual(90, evilHero.health);
   });
+
+  it("can ensorcelled weapon does double damage", function(){
+    hero.pickUpWeapon(weapon1);
+    weapon1.ensorcell(weapon1);
+    hero.strikeEnemy(weapon1, evilHero);
+    assert.strictEqual(80, evilHero.health);
+  });
+
+
 
 
 

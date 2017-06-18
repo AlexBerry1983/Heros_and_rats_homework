@@ -1,7 +1,7 @@
 var Weapon = function(type, damageValue, ensorcelled){
   this.type = type;
   this.damageValue = damageValue;
-  this.ensorcelled = false
+  this.ensorcelled = ensorcelled;
 }
 
 Weapon.prototype = {
